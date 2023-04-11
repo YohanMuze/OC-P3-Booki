@@ -52,7 +52,7 @@ button {
 }
 
 .main-margin-high {
-    margin: 0 50px;
+    margin: 0 40px;
 }
 
 .main-margin-low {
@@ -76,6 +76,7 @@ button {
 .header-logo {
     height: 19px;
     padding-top: 30px;
+    padding-left: 20px;
 }
 
 nav {
@@ -121,12 +122,12 @@ nav {
 
 .search-bar label {
     display: flex;
-    max-width: 200px;
+    width: 100%;
 }
 
 .search-box {
     display: flex;
-    max-width: 202px;
+    width: 100%;
     border: 2px solid var(--main-bg-color);
     font-size: larger;
     text-align: center;
@@ -154,7 +155,6 @@ nav {
 
 .filters {
     display: flex;
-    align-content: center;
     gap: 20px;
 }
 
@@ -246,7 +246,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 18px;
+    gap: 16px;
     margin-top: 30px;
 }
 
@@ -395,6 +395,12 @@ nav {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filter-button {
+        width: 155px;
+        font-size: 14px;
+        gap: 12px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -458,6 +464,10 @@ nav {
         gap: 20px;
     }
 
+    .header-logo {
+        padding-left: 0px;
+    }
+
     nav {
         width: 100%;
         margin-top: 20px;
@@ -465,7 +475,6 @@ nav {
 
     .nav-list {
         min-width: 100%;
-        margin-bottom: 20px;
     }
 
     .nav-buton {
@@ -476,25 +485,43 @@ nav {
 
     .nav-buton a {
         width: 100%;
+        border-bottom: 3px var(--main-bg-color) solid;
     }
 
     .nav-buton a:hover {
         border-top: none;
-        border-bottom: 2px var(--main-color) solid;
+        border-bottom: 3px var(--main-color) solid;
     }
 
     .info-group {
         margin: 0px 25px;
     }
 
+    .info-group p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .main-title {
+        margin-bottom: 0px;
+        font-size: 22px;
+    }
+
+    .search-bar {
+        width: 100%; 
+        margin-bottom: 20px;   
+    }
+
     .search-box {
-        max-width: 210px;
+        width: 100%;
     }
 
     .search-button {
         border-radius: 15px;
-        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
         height: 100%;
+        margin-left: -10px;
     }
 
     .search-button-text {
@@ -503,11 +530,6 @@ nav {
 
     .search-button-mobile {
         display: block;
-    }
-
-    .search-bar {
-        width: 100%;
-        justify-content: center;    
     }
 
     .filter-bar {
@@ -521,8 +543,10 @@ nav {
     }
 
     .filter-button {
-        width: 155px;
+        justify-content: center;
+        width: 130px;
         font-size: 14px;
+        gap: 7px;
     }
 
     .hebergements-and-populaires {
@@ -575,5 +599,7 @@ nav {
     .footer-band {
         flex-direction: column;
         gap: 40px;
+        padding-left: 30px;
+        padding-top: 30px;
     }
 }
